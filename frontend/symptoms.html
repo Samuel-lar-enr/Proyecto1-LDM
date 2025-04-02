@@ -3,71 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selección de Síntomas - Auto Diagnóstico</title>
+    <title>Selección de Síntomas - Auto Diagnóstico de Salud</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>AutoDiagnóstico</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="symptoms.html" class="active">Síntomas</a></li>
+                <li><a href="basic-info.html">Información Básica</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
     <main class="symptoms-container">
-        <h1>¿Cómo te sientes?</h1>
-        <p class="symptoms-intro">Selecciona los síntomas que estás experimentando</p>
-        
+        <h1>Selecciona tus Síntomas</h1>
+        <p>Marca todos los síntomas que estés experimentando actualmente.</p>
+
         <div class="symptoms-grid">
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="fiebre">
-                <span>Fiebre</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="dolor_cabeza">
-                <span>Dolor de Cabeza</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="tos">
-                <span>Tos</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="fatiga">
-                <span>Fatiga</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="nauseas">
-                <span>Náuseas</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="dolor_muscular">
-                <span>Dolor Muscular</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="dolor_garganta">
-                <span>Dolor de Garganta</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="congestion">
-                <span>Congestión</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="diarrea">
-                <span>Diarrea</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="dolor_pecho">
-                <span>Dolor de Pecho</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="dificultad_respirar">
-                <span>Dificultad para Respirar</span>
-            </label>
-            <label class="symptom-tag">
-                <input type="checkbox" name="symptoms" value="perdida_apetito">
-                <span>Pérdida de Apetito</span>
-            </label>
+            <!-- Síntomas Generales -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-thermometer-half"></i> Síntomas Generales</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="fiebre">
+                        <span>Fiebre</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="fatiga">
+                        <span>Fatiga</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="perdida_apetito">
+                        <span>Pérdida de Apetito</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="perdida_peso">
+                        <span>Pérdida de Peso</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sudoracion_nocturna">
+                        <span>Sudoración Nocturna</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="escalofrios">
+                        <span>Escalofríos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_muscular">
+                        <span>Dolor Muscular</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_articular">
+                        <span>Dolor Articular</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="inflamacion_ganglios">
+                        <span>Inflamación de Ganglios</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Respiratorios -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-lungs"></i> Síntomas Respiratorios</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="tos">
+                        <span>Tos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dificultad_respirar">
+                        <span>Dificultad para Respirar</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_pecho">
+                        <span>Dolor en el Pecho</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="flema">
+                        <span>Flema</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sangre_flema">
+                        <span>Sangre en la Flema</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="congestion_nasal">
+                        <span>Congestión Nasal</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_garganta">
+                        <span>Dolor de Garganta</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="ronquera">
+                        <span>Ronquera</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="estornudos">
+                        <span>Estornudos</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Digestivos -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-bowl-food"></i> Síntomas Digestivos</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="nauseas">
+                        <span>Náuseas</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="vomitos">
+                        <span>Vómitos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="diarrea">
+                        <span>Diarrea</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_abdominal">
+                        <span>Dolor Abdominal</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="hinchazon_abdominal">
+                        <span>Hinchazón Abdominal</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="acidez">
+                        <span>Acidez</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="indigestion">
+                        <span>Indigestión</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="estreñimiento">
+                        <span>Estreñimiento</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sangre_heces">
+                        <span>Sangre en Heces</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="ictericia">
+                        <span>Ictericia</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Neurológicos -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-brain"></i> Síntomas Neurológicos</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_cabeza">
+                        <span>Dolor de Cabeza</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="mareos">
+                        <span>Mareos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="desmayos">
+                        <span>Desmayos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="convulsiones">
+                        <span>Convulsiones</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="confusion">
+                        <span>Confusión</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dificultad_concentracion">
+                        <span>Dificultad para Concentrarse</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="problemas_memoria">
+                        <span>Problemas de Memoria</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="temblores">
+                        <span>Temblores</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="debilidad_muscular">
+                        <span>Debilidad Muscular</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Cardiovasculares -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-heart"></i> Síntomas Cardiovasculares</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="palpitaciones">
+                        <span>Palpitaciones</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_pecho">
+                        <span>Dolor en el Pecho</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="presion_alta">
+                        <span>Presión Alta</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="presion_baja">
+                        <span>Presión Baja</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="edema">
+                        <span>Edema</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="varices">
+                        <span>Várices</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_piernas">
+                        <span>Dolor en las Piernas</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="entumecimiento_extremidades">
+                        <span>Entumecimiento en Extremidades</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Dermatológicos -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-user-shield"></i> Síntomas Dermatológicos</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="erupcion_cutanea">
+                        <span>Erupción Cutánea</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="picazon">
+                        <span>Picazón</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="urticaria">
+                        <span>Urticaria</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="ampollas">
+                        <span>Ampollas</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="descamacion">
+                        <span>Descamación</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="cambios_color_piel">
+                        <span>Cambios en el Color de la Piel</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="ulceras">
+                        <span>Úlceras</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="moretones">
+                        <span>Moretones</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sangrado_facil">
+                        <span>Sangrado Fácil</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Oculares -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-eye"></i> Síntomas Oculares</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="vision_borrosa">
+                        <span>Visión Borrosa</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_ojos">
+                        <span>Dolor en los Ojos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="enrojecimiento_ojos">
+                        <span>Enrojecimiento de Ojos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sensibilidad_luz">
+                        <span>Sensibilidad a la Luz</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="lagrimeo">
+                        <span>Lagrimeo</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="secrecion_ocular">
+                        <span>Secreción Ocular</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="doble_vision">
+                        <span>Doble Visión</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Auditivos -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-ear-listen"></i> Síntomas Auditivos</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_oidos">
+                        <span>Dolor en los Oídos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="zumbido_oidos">
+                        <span>Zumbido en los Oídos</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="perdida_audicion">
+                        <span>Pérdida de Audición</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="secrecion_auditiva">
+                        <span>Secreción Auditiva</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Bucales -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-tooth"></i> Síntomas Bucales</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_dientes">
+                        <span>Dolor en los Dientes</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sangrado_encías">
+                        <span>Sangrado en Encías</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="ulceras_bucales">
+                        <span>Úlceras Bucales</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="boca_seca">
+                        <span>Boca Seca</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="mal_aliento">
+                        <span>Mal Aliento</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dificultad_tragar">
+                        <span>Dificultad para Tragar</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Síntomas Urinarios -->
+            <div class="symptom-category">
+                <h2><i class="fas fa-tint"></i> Síntomas Urinarios</h2>
+                <div class="symptom-tags">
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_orinar">
+                        <span>Dolor al Orinar</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="frecuencia_orinar">
+                        <span>Frecuencia al Orinar</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="sangre_orina">
+                        <span>Sangre en la Orina</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="incontinencia">
+                        <span>Incontinencia</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="retencion_urinaria">
+                        <span>Retención Urinaria</span>
+                    </label>
+                    <label class="symptom-tag">
+                        <input type="checkbox" name="symptom" value="dolor_lumbar">
+                        <span>Dolor Lumbar</span>
+                    </label>
+                </div>
+            </div>
         </div>
 
-        <button id="next-btn" class="next-button" disabled>
-            Continuar <i class="fas fa-arrow-right"></i>
-        </button>
+        <div class="symptoms-actions">
+            <button class="next-button" onclick="saveSymptoms()">
+                Siguiente <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
     </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@autodiagnostico.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="symptoms.html">Síntomas</a></li>
+                    <li><a href="basic-info.html">Información Básica</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Auto Diagnóstico de Salud. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script src="symptoms.js"></script>
 </body>

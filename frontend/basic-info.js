@@ -25,22 +25,10 @@ submitBtn.addEventListener('click', () => {
     const age = document.querySelector('input[name="age"]:checked').value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
     
-    // Obtener los síntomas seleccionados del localStorage
-    const selectedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms') || '[]');
+    // Guardar la información del usuario en localStorage
+    localStorage.setItem('userAge', age);
+    localStorage.setItem('userGender', gender);
     
-    // Crear el objeto con toda la información
-    const diagnosticData = {
-        symptoms: selectedSymptoms,
-        age: age,
-        gender: gender
-    };
-    
-    // Aquí puedes enviar los datos al backend
-    console.log('Datos del diagnóstico:', diagnosticData);
-    
-    // Limpiar el localStorage
-    localStorage.removeItem('selectedSymptoms');
-    
-    // Redirigir a la página de resultados (a implementar)
-    // window.location.href = 'results.html';
+    // Redirigir a la página de resultados
+    window.location.href = 'results.html';
 }); 

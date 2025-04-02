@@ -14,13 +14,17 @@ symptomTags.forEach(tag => {
 });
 
 // Manejar el clic en el botón de continuar
-nextBtn.addEventListener('click', () => {
-    const selectedSymptoms = Array.from(document.querySelectorAll('.symptom-tag input[type="checkbox"]:checked'))
+function saveSymptoms() {
+    const selectedSymptoms = Array.from(document.querySelectorAll('input[name="symptom"]:checked'))
         .map(checkbox => checkbox.value);
-    
-    // Guardar los síntomas seleccionados en el localStorage
+
+    if (selectedSymptoms.length === 0) {
+        showMessage('Por favor, selecciona al menos un síntoma', 'error');
+        return;
+    }
+
     localStorage.setItem('selectedSymptoms', JSON.stringify(selectedSymptoms));
-    
-    // Redirigir a la página de información básica
     window.location.href = 'basic-info.html';
-}); 
+}
+
+nextBtn.addEventListener('click', saveSymptoms); 
