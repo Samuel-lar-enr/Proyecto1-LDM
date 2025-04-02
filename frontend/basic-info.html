@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Básica - Auto Diagnóstico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <main class="basic-info-container">
+        <h1>Información Básica</h1>
+        
+        <div class="info-section">
+            <h2>¿Cuál es tu edad?</h2>
+            <div class="age-tags">
+                <label class="age-tag">
+                    <input type="radio" name="age" value="menos_18">
+                    <span>Menos de 18</span>
+                </label>
+                <label class="age-tag">
+                    <input type="radio" name="age" value="18_30">
+                    <span>18-30</span>
+                </label>
+                <label class="age-tag">
+                    <input type="radio" name="age" value="31_50">
+                    <span>31-50</span>
+                </label>
+                <label class="age-tag">
+                    <input type="radio" name="age" value="51_70">
+                    <span>51-70</span>
+                </label>
+                <label class="age-tag">
+                    <input type="radio" name="age" value="mas_70">
+                    <span>Más de 70</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>¿Cuál es tu género?</h2>
+            <div class="gender-tags">
+                <label class="gender-tag">
+                    <input type="radio" name="gender" value="masculino">
+                    <span>Masculino</span>
+                </label>
+                <label class="gender-tag">
+                    <input type="radio" name="gender" value="femenino">
+                    <span>Femenino</span>
+                </label>
+            </div>
+        </div>
+
+        <button id="submit-btn" class="submit-button" disabled>
+            Enviar <i class="fas fa-paper-plane"></i>
+        </button>
+    </main>
+
+    <script src="basic-info.js"></script>
+</body>
+</html> 

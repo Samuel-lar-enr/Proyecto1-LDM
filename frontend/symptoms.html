@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Síntomas - Auto Diagnóstico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <main class="symptoms-container">
+        <h1>¿Cómo te sientes?</h1>
+        <p class="symptoms-intro">Selecciona los síntomas que estás experimentando</p>
+        
+        <div class="symptoms-grid">
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="fiebre">
+                <span>Fiebre</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="dolor_cabeza">
+                <span>Dolor de Cabeza</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="tos">
+                <span>Tos</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="fatiga">
+                <span>Fatiga</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="nauseas">
+                <span>Náuseas</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="dolor_muscular">
+                <span>Dolor Muscular</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="dolor_garganta">
+                <span>Dolor de Garganta</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="congestion">
+                <span>Congestión</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="diarrea">
+                <span>Diarrea</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="dolor_pecho">
+                <span>Dolor de Pecho</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="dificultad_respirar">
+                <span>Dificultad para Respirar</span>
+            </label>
+            <label class="symptom-tag">
+                <input type="checkbox" name="symptoms" value="perdida_apetito">
+                <span>Pérdida de Apetito</span>
+            </label>
+        </div>
+
+        <button id="next-btn" class="next-button" disabled>
+            Continuar <i class="fas fa-arrow-right"></i>
+        </button>
+    </main>
+
+    <script src="symptoms.js"></script>
+</body>
+</html> 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Diagnóstico - HealthCheck</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthCheck</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="diagnostic.html" class="active">Auto Diagnóstico</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="diagnostic-container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="diagnostic-content">
+            <h1>Auto Diagnóstico de Salud</h1>
+            <p class="diagnostic-intro">Por favor, responde las siguientes preguntas para obtener una evaluación preliminar de tu salud.</p>
+
+            <form id="diagnostic-form" class="diagnostic-form">
+                <!-- Información Básica -->
+                <div class="form-section" id="basic-info">
+                    <h2>Información Básica</h2>
+                    <div class="form-group">
+                        <label for="age">Edad</label>
+                        <input type="number" id="age" name="age" min="0" max="120" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Género</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="other">Otro</option>
+                            <option value="prefer-not-to-say">Prefiero no decir</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Síntomas Principales -->
+                <div class="form-section" id="main-symptoms">
+                    <h2>Síntomas Principales</h2>
+                    <div class="form-group">
+                        <label for="symptoms">Describe tus síntomas principales</label>
+                        <textarea id="symptoms" name="symptoms" rows="4" required
+                            placeholder="Por ejemplo: dolor de cabeza, fiebre, tos..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms-duration">¿Cuánto tiempo llevas con estos síntomas?</label>
+                        <select id="symptoms-duration" name="symptoms-duration" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="less-than-24h">Menos de 24 horas</option>
+                            <option value="1-3-days">1-3 días</option>
+                            <option value="4-7-days">4-7 días</option>
+                            <option value="more-than-7-days">Más de 7 días</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Historial Médico -->
+                <div class="form-section" id="medical-history">
+                    <h2>Historial Médico</h2>
+                    <div class="form-group">
+                        <label>¿Tienes alguna condición médica preexistente?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="pre-existing" value="yes" required>
+                                Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="pre-existing" value="no" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="conditions-details" style="display: none;">
+                        <label for="conditions">Especifica las condiciones</label>
+                        <textarea id="conditions" name="conditions" rows="3"
+                            placeholder="Por ejemplo: hipertensión, diabetes..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Estás tomando algún medicamento actualmente?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="medications" value="yes" required>
+                                Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="medications" value="no" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="medications-details" style="display: none;">
+                        <label for="medications">Especifica los medicamentos</label>
+                        <textarea id="medications" name="medications" rows="3"
+                            placeholder="Lista los medicamentos que estás tomando"></textarea>
+                    </div>
+                </div>
+
+                <!-- Factores de Riesgo -->
+                <div class="form-section" id="risk-factors">
+                    <h2>Factores de Riesgo</h2>
+                    <div class="form-group">
+                        <label>¿Fumas?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="smoking" value="yes" required>
+                                Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="smoking" value="no" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Consumes alcohol regularmente?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="alcohol" value="yes" required>
+                                Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="alcohol" value="no" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Realizas ejercicio regularmente?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="exercise" value="yes" required>
+                                Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="exercise" value="no" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="form-navigation">
+                    <button type="button" id="prev-btn" class="nav-btn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button type="button" id="next-btn" class="nav-btn">
+                        Siguiente <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button type="submit" id="submit-btn" class="submit-btn" style="display: none;">
+                        <i class="fas fa-check"></i> Obtener Diagnóstico
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>HealthCheck</h4>
+                <p>Tu salud es nuestra prioridad</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="diagnostic.html">Auto Diagnóstico</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: info@healthcheck.com</p>
+                <p>Tel: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HealthCheck. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="diagnostic.js"></script>
+</body>
+</html> 
