@@ -643,65 +643,111 @@ const sortedDiseases = diseases
 
 // Función para crear una tarjeta de enfermedad
 function createDiseaseCard(disease) {
+    const card = document.createElement('div');
+    
+    // Calcular síntomas coincidentes
     const matchingSymptoms = disease.symptoms.filter(symptom => 
         selectedSymptoms.includes(symptom)
     );
     
-    const matchPercentage = Math.round((matchingSymptoms.length / selectedSymptoms.length) * 100);
+    // Calcular porcentaje basado en los síntomas totales de la enfermedad
+    const matchPercentage = Math.round((matchingSymptoms.length / disease.symptoms.length) * 100);
     
-    return `
-        <div class="disease-card">
-            <div class="disease-match">
-                <i class="fas fa-percentage"></i>
-                Coincidencia: ${matchPercentage}%
-            </div>
-            <div class="disease-title">
-                <h2 class="disease-name">${disease.name}</h2>
-                <p class="disease-scientific">${disease.scientific}</p>
-            </div>
-            
-            <div class="disease-section">
-                <h3><i class="fas fa-list"></i> Síntomas</h3>
-                <div class="symptoms-list">
-                    ${disease.symptoms.map(symptom => `
-                        <span class="symptom-item ${matchingSymptoms.includes(symptom) ? 'matched' : ''}">
-                            ${symptom.replace('_', ' ')}
-                        </span>
-                    `).join('')}
-                </div>
-            </div>
-            
-            <div class="disease-section">
-                <h3><i class="fas fa-users"></i> Demografía</h3>
-                <div class="demographics-list">
-                    <span class="demographic-item">
-                        <i class="fas fa-venus-mars"></i>
-                        ${disease.demographics.gender.join(', ')}
+    // Solo agregar la clase zero-match si el porcentaje es 0
+    if (matchPercentage === 0) {
+        card.className = 'disease-card zero-match';
+    } else {
+        card.className = 'disease-card';
+    }
+    
+    card.innerHTML = `
+        <div class="disease-match">
+            <i class="fas fa-percentage"></i>
+            Coincidencia: ${matchPercentage}%
+        </div>
+        <div class="disease-title">
+            <h2 class="disease-name">${disease.name}</h2>
+            <p class="disease-scientific">${disease.scientific}</p>
+        </div>
+        
+        <div class="disease-section">
+            <h3><i class="fas fa-list"></i> Síntomas</h3>
+            <div class="symptoms-list">
+                ${disease.symptoms.map(symptom => `
+                    <span class="symptom-item ${matchingSymptoms.includes(symptom) ? 'matched' : ''}">
+                        ${symptom}
                     </span>
-                    <span class="demographic-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        ${disease.demographics.age.map(age => {
-                            switch(age) {
-                                case 'menos_18': return 'Menos de 18';
-                                case '18_30': return '18-30';
-                                case '31_50': return '31-50';
-                                case '51_70': return '51-70';
-                                case 'mas_70': return 'Más de 70';
-                                default: return age;
-                            }
-                        }).join(', ')}
-                    </span>
-                </div>
+                `).join('')}
+            </div>
+        </div>
+        
+        <div class="disease-section">
+            <h3><i class="fas fa-users"></i> Demografía</h3>
+            <div class="demographics-list">
+                <span class="demographic-item">
+                    <i class="fas fa-venus-mars"></i>
+                    ${disease.demographics.gender.join(', ')}
+                </span>
+                <span class="demographic-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    ${disease.demographics.age.map(age => {
+                        switch(age) {
+                            case 'menos_18': return 'Menos de 18';
+                            case '18_30': return '18-30';
+                            case '31_50': return '31-50';
+                            case '51_70': return '51-70';
+                            case 'mas_70': return 'Más de 70';
+                            default: return age;
+                        }
+                    }).join(', ')}
+                </span>
             </div>
         </div>
     `;
+    
+    return card;
 }
 
-// Renderizar resultados
-const resultsGrid = document.querySelector('.results-grid');
-resultsGrid.innerHTML = sortedDiseases
-    .map(disease => createDiseaseCard(disease))
-    .join('');
+// Función para renderizar los resultados
+function renderResults() {
+    const resultsContainer = document.querySelector('.results-grid');
+    resultsContainer.innerHTML = '';
+    
+    sortedDiseases.forEach(disease => {
+        const card = createDiseaseCard(disease);
+        resultsContainer.appendChild(card);
+    });
+}
+
+// Función para manejar el botón de mostrar/ocultar
+function setupToggleZeroButton() {
+    const toggleButton = document.querySelector('.toggle-zero-button');
+    let showZeroMatches = false;
+
+    toggleButton.addEventListener('click', () => {
+        showZeroMatches = !showZeroMatches;
+        const zeroMatchCards = document.querySelectorAll('.disease-card.zero-match');
+        
+        zeroMatchCards.forEach(card => {
+            if (showZeroMatches) {
+                card.classList.add('visible');
+            } else {
+                card.classList.remove('visible');
+            }
+        });
+
+        toggleButton.classList.toggle('active');
+        toggleButton.innerHTML = showZeroMatches ? 
+            '<i class="fas fa-eye"></i> Mostrar 0%' : 
+            '<i class="fas fa-eye-slash"></i> Ocultar 0%';
+    });
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    renderResults();
+    setupToggleZeroButton();
+});
 
 // Manejar la impresión
 const printButton = document.querySelector('.print-button');
