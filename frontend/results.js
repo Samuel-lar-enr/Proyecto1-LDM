@@ -747,10 +747,4 @@ function setupToggleZeroButton() {
 document.addEventListener('DOMContentLoaded', () => {
     renderResults();
     setupToggleZeroButton();
-});
-
-// Manejar la impresión
-const printButton = document.querySelector('.print-button');
-printButton.addEventListener('click', () => {
-    window.print();
 }); 
