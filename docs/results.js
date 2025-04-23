@@ -604,6 +604,368 @@ const diseases = [
             gender: ["masculino", "femenino"],
             age: ["51_70", "mas_70"]
         }
+    },
+
+    // Enfermedades con síntomas poco comunes
+    {
+        name: "Síndrome de Raynaud",
+        scientific: "Fenómeno de Raynaud",
+        symptoms: ["entumecimiento_extremidades", "cambios_color_piel", "dolor_extremidades", "sensibilidad_frio", "ulceras"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Sjögren",
+        scientific: "Síndrome de Sjögren",
+        symptoms: ["boca_seca", "ojos_secos", "dolor_articular", "fatiga", "dificultad_tragar"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Guillain-Barré",
+        scientific: "Polineuropatía Inflamatoria",
+        symptoms: ["debilidad_muscular", "entumecimiento_extremidades", "dificultad_caminar", "dificultad_respiratoria", "dolor_muscular"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Marfan",
+        scientific: "Síndrome de Marfan",
+        symptoms: ["dolor_articular", "debilidad_muscular", "dificultad_respiratoria", "dolor_pecho", "cambios_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30", "31_50"]
+        }
+    },
+    {
+        name: "Síndrome de Ehlers-Danlos",
+        scientific: "Síndrome de Ehlers-Danlos",
+        symptoms: ["dolor_articular", "hiperlaxitud", "debilidad_muscular", "moretones", "cambios_piel"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30", "31_50"]
+        }
+    },
+    {
+        name: "Síndrome de Behçet",
+        scientific: "Enfermedad de Behçet",
+        symptoms: ["ulceras_bucales", "erupcion_cutanea", "dolor_articular", "inflamacion_ojos", "dolor_genital"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Reiter",
+        scientific: "Artritis Reactiva",
+        symptoms: ["dolor_articular", "inflamacion_ojos", "dolor_genital", "dolor_espalda", "fatiga"],
+        demographics: {
+            gender: ["masculino"],
+            age: ["18_30", "31_50"]
+        }
+    },
+    {
+        name: "Síndrome de Sweet",
+        scientific: "Dermatosis Neutrofílica Aguda",
+        symptoms: ["erupcion_cutanea", "fiebre", "dolor_articular", "fatiga", "inflamacion_piel"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Stevens-Johnson",
+        scientific: "Necrólisis Epidérmica Tóxica",
+        symptoms: ["erupcion_cutanea", "ampollas", "fiebre", "dolor_articular", "dificultad_respiratoria"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Dressler",
+        scientific: "Pericarditis Post-Infarto",
+        symptoms: ["dolor_pecho", "fiebre", "dificultad_respiratoria", "fatiga", "dolor_articular"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["31_50", "51_70", "mas_70"]
+        }
+    },
+    {
+        name: "Síndrome de Klinefelter",
+        scientific: "Síndrome de Klinefelter",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "infertilidad", "cambios_personalidad", "fatiga"],
+        demographics: {
+            gender: ["masculino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Turner",
+        scientific: "Síndrome de Turner",
+        symptoms: ["baja_estatura", "infertilidad", "debilidad_muscular", "cambios_personalidad", "fatiga"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["menos_18", "18_30", "31_50"]
+        }
+    },
+    {
+        name: "Síndrome de Prader-Willi",
+        scientific: "Síndrome de Prader-Willi",
+        symptoms: ["obesidad", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "fatiga"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Angelman",
+        scientific: "Síndrome de Angelman",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "convulsiones", "problemas_equilibrio"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Rett",
+        scientific: "Síndrome de Rett",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "convulsiones", "problemas_equilibrio"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Williams",
+        scientific: "Síndrome de Williams",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Noonan",
+        scientific: "Síndrome de Noonan",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Rubinstein-Taybi",
+        scientific: "Síndrome de Rubinstein-Taybi",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Cornelia de Lange",
+        scientific: "Síndrome de Cornelia de Lange",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Smith-Magenis",
+        scientific: "Síndrome de Smith-Magenis",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_sueno", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Cri du Chat",
+        scientific: "Síndrome de Cri du Chat",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Wolf-Hirschhorn",
+        scientific: "Síndrome de Wolf-Hirschhorn",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Patau",
+        scientific: "Trisomía 13",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18"]
+        }
+    },
+    {
+        name: "Síndrome de Edwards",
+        scientific: "Trisomía 18",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18"]
+        }
+    },
+    {
+        name: "Síndrome de Down",
+        scientific: "Trisomía 21",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Klinefelter",
+        scientific: "Síndrome de Klinefelter",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "infertilidad", "fatiga"],
+        demographics: {
+            gender: ["masculino"],
+            age: ["18_30", "31_50", "51_70"]
+        }
+    },
+    {
+        name: "Síndrome de Turner",
+        scientific: "Síndrome de Turner",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "infertilidad"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["menos_18", "18_30", "31_50"]
+        }
+    },
+    {
+        name: "Síndrome de Prader-Willi",
+        scientific: "Síndrome de Prader-Willi",
+        symptoms: ["obesidad", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "fatiga"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Angelman",
+        scientific: "Síndrome de Angelman",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "convulsiones", "problemas_equilibrio"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Rett",
+        scientific: "Síndrome de Rett",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "convulsiones", "problemas_equilibrio"],
+        demographics: {
+            gender: ["femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Williams",
+        scientific: "Síndrome de Williams",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Noonan",
+        scientific: "Síndrome de Noonan",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Rubinstein-Taybi",
+        scientific: "Síndrome de Rubinstein-Taybi",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Cornelia de Lange",
+        scientific: "Síndrome de Cornelia de Lange",
+        symptoms: ["baja_estatura", "debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Smith-Magenis",
+        scientific: "Síndrome de Smith-Magenis",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_sueno", "problemas_vision"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Cri du Chat",
+        scientific: "Síndrome de Cri du Chat",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Wolf-Hirschhorn",
+        scientific: "Síndrome de Wolf-Hirschhorn",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30"]
+        }
+    },
+    {
+        name: "Síndrome de Patau",
+        scientific: "Trisomía 13",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18"]
+        }
+    },
+    {
+        name: "Síndrome de Edwards",
+        scientific: "Trisomía 18",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18"]
+        }
+    },
+    {
+        name: "Síndrome de Down",
+        scientific: "Trisomía 21",
+        symptoms: ["debilidad_muscular", "dificultad_concentracion", "cambios_personalidad", "problemas_vision", "problemas_audicion"],
+        demographics: {
+            gender: ["masculino", "femenino"],
+            age: ["menos_18", "18_30", "31_50", "51_70"]
+        }
     }
 ];
 
@@ -639,7 +1001,18 @@ const sortedDiseases = diseases
         ...disease,
         relevance: calculateRelevance(disease)
     }))
-    .sort((a, b) => b.relevance - a.relevance);
+    .sort((a, b) => {
+        // Primero ordenar por porcentaje de coincidencia
+        const matchPercentageA = (a.symptoms.filter(symptom => selectedSymptoms.includes(symptom)).length / a.symptoms.length) * 100;
+        const matchPercentageB = (b.symptoms.filter(symptom => selectedSymptoms.includes(symptom)).length / b.symptoms.length) * 100;
+        
+        if (matchPercentageB !== matchPercentageA) {
+            return matchPercentageB - matchPercentageA;
+        }
+        
+        // Si el porcentaje es igual, ordenar por relevancia total
+        return b.relevance - a.relevance;
+    });
 
 // Función para crear una tarjeta de enfermedad
 function createDiseaseCard(disease) {
